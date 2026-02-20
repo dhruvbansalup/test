@@ -11,6 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 👇 Cache step (REQUIRED)
       - name: Cache dependencies
         id: cache-step
         uses: actions/cache@v4
@@ -18,11 +19,17 @@ jobs:
           path: cache-folder
           key: cache-2f1596a
 
+      # 👇 REQUIRED step name
       - name: prime-cache-2f1596a
         run: echo "Cache hit? ${{ steps.cache-step.outputs.cache-hit }}"
 
+      # 👇 Create cache content if missing
       - name: Create file if cache miss
         if: steps.cache-step.outputs.cache-hit != 'true'
         run: |
           mkdir -p cache-folder
           echo "Hello Cache!" > cache-folder/data.txt
+
+      # 👇 Your old test step merged here
+      - name: 24f1001707@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
