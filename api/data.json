@@ -148,19 +148,19 @@
     },
     "electronics": {
       "count": 4,
-      "inventoryValue": 122878.8
+      "inventoryValue": 91782.42
     },
     "home": {
       "count": 4,
-      "inventoryValue": 122878.8
+      "inventoryValue": 79587.46
     },
     "sports": {
       "count": 4,
-      "inventoryValue": 122878.8
+      "inventoryValue": 120704.57
     },
     "books": {
       "count": 1,
-      "inventoryValue": 484.53
+      "inventoryValue": 38277.87
     }
- }
+   }
 }
