@@ -1,0 +1,28 @@
+name: Cache Demo
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        id: cache-step
+        uses: actions/cache@v4
+        with:
+          path: cache-folder
+          key: cache-2f1596a
+
+      - name: prime-cache-2f1596a
+        run: echo "Cache hit? ${{ steps.cache-step.outputs.cache-hit }}"
+
+      - name: Create file if cache miss
+        if: steps.cache-step.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p cache-folder
+          echo "Hello Cache!" > cache-folder/data.txt
