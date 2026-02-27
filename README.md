@@ -1,3 +1,5 @@
+[![CI Workflow](https://github.com/dhruvbansalup/test/actions/workflows/ci.yml/badge.svg)](https://github.com/dhruvbansalup/test/actions/workflows/ci.yml)
+
 # q-git-revert-env
 
 A Flask-based REST API service.
