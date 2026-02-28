@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository - 24f1001707@ds.study.iitm.ac.in
         uses: actions/checkout@v4
 
-      - name: Update file - 24f1001707@ds.study.iitm.ac.in
+      - name: Update - 24f1001707@ds.study.iitm.ac.in
         run: |
           echo "Last updated at $(date)" >> daily-log.txt
 
-      - name: Commit and push
+      - name: Commit and push- 24f1001707@ds.study.iitm.ac.in
         run: |
           git config --global user.name "DevSync Bot"
           git config --global user.email "24f1001707@ds.study.iitm.ac.in"
